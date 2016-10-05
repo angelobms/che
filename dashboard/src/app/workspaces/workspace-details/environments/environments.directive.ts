@@ -25,25 +25,26 @@
  * @author Oleksii Kurinnyi
  */
 export class WorkspaceEnvironments {
+  restrict = 'E';
+  templateUrl = 'app/workspaces/workspace-details/environments/environments.html';
+
+  controller = 'WorkspaceEnvironmentsController';
+  controllerAs = 'workspaceEnvironmentsController';
+  bindToController = true;
+
+  scope = {
+    workspaceCreationFlow: '=',
+    workspaceName: '=',
+    environmentName: '=',
+    machinesViewStatus: '=',
+    workspaceConfig: '=',
+    environmentOnChange: '&'
+  };
 
   /**
    * Default constructor that is using resource
    * @ngInject for Dependency injection
    */
-  constructor () {
-    this.restrict = 'E';
-    this.templateUrl = 'app/workspaces/workspace-details/environments/environments.html';
-
-    this.controller = 'WorkspaceEnvironmentsController';
-    this.controllerAs = 'workspaceEnvironmentsController';
-    this.bindToController = true;
-
-    this.scope = {
-      environmentName: '=',
-      machinesViewStatus: '=',
-      workspaceConfig: '=',
-      environmentOnChange: '&'
-    }
-  }
+  constructor () { }
 }
 
