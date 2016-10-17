@@ -60,7 +60,7 @@ export class WorkspaceDetailsController {
   usedNamesList: any = [];
 
   forms: Map<number, any> = new Map();
-  Tab;
+  tab;
 
   /**
    * Default constructor that is using resource injection
@@ -81,7 +81,7 @@ export class WorkspaceDetailsController {
     this.ideSvc = ideSvc;
     this.workspaceDetailsService = workspaceDetailsService;
 
-    this.Tab = Tab;
+    this.tab = Tab;
 
     cheWorkspace.fetchWorkspaces().then(() => {
       let workspaces: any[] = cheWorkspace.getWorkspaces();

@@ -38,7 +38,7 @@
           <che-label-container che-label-name="Name">
             <div layout="column" class="workspace-details-input">
               <ng-form flex layout="column" name="workspaceNameForm">
-                <che-input ng-init="workspaceDetailsController.setForm(workspaceDetailsController.Tab.Settings, workspaceNameForm)"
+                <che-input ng-init="workspaceDetailsController.setForm(workspaceDetailsController.tab.Settings, workspaceNameForm)"
                            che-form="workspaceNameForm"
                            che-name="name"
                            che-place-holder="Name of the workspace"
@@ -119,7 +119,7 @@
       <md-tab-body>
         <ng-form name="workspaceRuntimeForm">
           <workspace-environments
-            ng-init="workspaceDetailsController.setForm(workspaceDetailsController.Tab.Runtime, workspaceRuntimeForm)"
+            ng-init="workspaceDetailsController.setForm(workspaceDetailsController.tab.Runtime, workspaceRuntimeForm)"
             workspace-creation-flow="workspaceDetailsController.isCreationFlow"
             workspace-name="workspaceDetailsController.newName"
             environment-name="workspaceDetailsController.copyWorkspaceDetails.config.defaultEnv"

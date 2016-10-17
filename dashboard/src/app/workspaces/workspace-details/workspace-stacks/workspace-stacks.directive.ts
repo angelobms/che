@@ -24,17 +24,21 @@ export class WorkspaceStacks {
 
   bindToController: boolean = true;
 
-  // scope values
-  scope: Object = {
-    workspaceName: '=',
-    workspaceStackOnChange: '&'
+  scope: {
+    [propName: string]: string
   };
 
   /**
    * Default constructor that is using resource
    * @ngInject for Dependency injection
    */
-  constructor() { }
+  constructor() {
+    // scope values
+    this.scope = {
+      workspaceName: '=',
+      workspaceStackOnChange: '&'
+    };
+  }
 
 }
 
